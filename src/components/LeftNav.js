@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { PanelGroup, Panel } from 'react-bootstrap';
 import '../css/LeftNav.css';
-import content from '../../schema.json';
+import menuItems from '../../schema.json';
+import { titleize } from '../helpers';
 
 class LeftNav extends Component {
   componentWillMount() {
-    console.log(content);
+    console.log(menuItems);
   }
 
   render() {
@@ -13,8 +14,7 @@ class LeftNav extends Component {
       <div className="left-panel">
         <h4 className="field-groups">Field Groups</h4>
         <PanelGroup accordion>
-          <Panel header="Panel 1" eventKey="1">Panel 1 content</Panel>
-          <Panel header="Panel 2" eventKey="2">Panel 2 content</Panel>
+          <Panel header={ titleize(menuItems[0]['name']) } eventKey={1}>poop</Panel>
         </PanelGroup>
       </div>
     )
