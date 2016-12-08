@@ -1,0 +1,22 @@
+h4.field-groups {
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+  background-color: #5a8a8a;
+  color: #ffffff;
+  margin-bottom: 2px;
+  padding: 12px;
+  text-transform: uppercase;
+}
+
+.panel-group {
+  border: 1px solid #e6e6e6;
+  border-radius: 4px;
+}
+
+.panel-group .panel {
+  margin-bottom: -6px;
+}
+
+.panel-heading a:hover {
+  cursor: pointer;
+}
