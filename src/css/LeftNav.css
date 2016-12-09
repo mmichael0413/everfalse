@@ -8,6 +8,23 @@ h4.field-groups {
   text-transform: uppercase;
 }
 
+.panel-body-prop {
+  border-left: 3px solid #a52a2a;
+  color: #004646;
+  cursor: pointer;
+  font-weight: 300;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.panel-body-prop:last-child {
+  margin-bottom: 0;
+}
+
+.panel-body-prop:hover {
+  background-color: #ffefd6;
+}
+
 .panel-group {
   border: 1px solid #e6e6e6;
   border-radius: 4px;
