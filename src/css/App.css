@@ -1,3 +1,11 @@
-.left-nav {
+h1 {
+  margin-bottom: 20px;
+}
+
+.nav-left {
   background-color: #e6e6e6;
+}
+
+.nav-right {
+  background-color: rgba(216, 214, 214, 0.2);
 }

@@ -1,0 +1,83 @@
+h3 {
+  margin-bottom: 20px;
+}
+
+h4 {
+  color: #5a8a8a;
+  margin-top: 0px;
+}
+
+.panel-contents-right {
+  margin: 25px 15px;
+}
+
+.panel-header-right {
+  color: #5a8a8a;
+}
+
+.prop {
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  background-color: white;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+.prop-left.col-md-4.col-xs-6 {
+  padding-right: 0px;
+}
+
+.prop-left-title {
+  font-weight: bold;
+  color: #5a8a8a;
+  background-color: #eaefef;
+  padding: 8px 0px 8px 13px;
+  border: 1px solid #e6e6e6;
+}
+
+.prop-right.col-md-8.col-xs-12 {
+  padding-left: 0px;
+}
+
+.prop-right-details {
+  border: 1px solid #e6e6e6;
+  background-color: #ffffff;
+  padding: 8px 0px 8px 13px;
+}
+
+.name {
+  background-color: #eaefef;
+  padding: 8px 0px 8px 13px;
+  border: 1px solid #e6e6e6;
+  background-color: #ffffff;
+  font-weight: bold;
+  color: purple;  
+}
+
+.row {
+  margin-bottom: 5px;
+}
+
+.usage span {
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+span.usage {
+  background-size: 17px 17px;
+  background-repeat: no-repeat;
+}
+
+.giving_tree {
+  background: url('../images/green_arrow.png');
+}
+
+.console {
+  background: url('../images/orange_arrow.png');
+}
+
+.community {
+  background: url('../images/pink_arrow.png');
+}
+

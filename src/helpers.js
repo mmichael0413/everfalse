@@ -4,7 +4,7 @@ export function capitalize(str) {
 }
 
 export function titleize(str) {
-  var string_array = str.split(' ');
+  var string_array = str.indexOf('_') > -1 ? str.split('_') : str.split(' ');
   string_array = string_array.map(str => capitalize(str));
   return string_array.join(' ');
 }
