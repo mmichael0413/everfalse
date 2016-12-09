@@ -20,11 +20,10 @@ class LeftNav extends Component {
     if (props !== undefined) {
       return(
         <Panel key={item.name} header={titleize(item.name)} eventKey={index} onClick={() => this.props.updateRightNav(item.name)}>
-          {props.map(
-            (prop) => 
-              <div key={prop.name} className="panel-body-prop" onClick={() => this.scrollToProp(prop.name)}>
-                {titleize(prop.name)}<br/>
-              </div>
+          {props.map((prop) =>
+            <div key={prop.name} className="panel-body-prop" onClick={() => this.scrollToProp(prop.name)}>
+              {titleize(prop.name)}<br/>
+            </div>
           )}
         </Panel>
       )

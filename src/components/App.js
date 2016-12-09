@@ -16,7 +16,7 @@ class App extends Component {
   componentWillMount() {
     const items = {...this.state.items};
     menuItems.map((item) => {
-      items[`${item.name}`] = item;
+      return items[`${item.name}`] = item;
     });
     const currentItem = Object.keys(items)[0];
     this.setState({ items, currentItem });
