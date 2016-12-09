@@ -51,7 +51,7 @@ class LeftNav extends Component {
     return(
       <div>
         <h4 className="field-groups">Field Groups</h4>
-        <PanelGroup accordion>
+        <PanelGroup defaultActiveKey={0} accordion>
           {itemIds.map((id, index) => this.renderBody(id, index))}
         </PanelGroup>
       </div>
