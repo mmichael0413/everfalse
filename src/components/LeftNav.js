@@ -3,10 +3,14 @@ import { PanelGroup, Panel } from 'react-bootstrap';
 import { titleize } from '../helpers';
 import '../css/LeftNav.css';
 
+import Scroll from 'react-scroll';
+const scroller = Scroll.scroller;
+
 class LeftNav extends Component {
   constructor() {
     super();
-    this.renderBody = this.renderBody.bind(this);
+    this.renderBody   = this.renderBody.bind(this);
+    this.scrollToProp = this.scrollToProp.bind(this);
   }
 
   renderBody(key, index) {
@@ -17,17 +21,28 @@ class LeftNav extends Component {
       return(
         <Panel key={item.name} header={titleize(item.name)} eventKey={index}>
           {props.map(
-            (prop) => <div key={prop.name} className="panel-body-prop">{titleize(prop.name)}<br/></div>
+            (prop) => 
+              <div key={prop.name} className="panel-body-prop" onClick={() => this.scrollToProp(prop.name)}>
+                {titleize(prop.name)}<br/>
+              </div>
           )}
         </Panel>
       )
     } else {
       return(
         <Panel key={item.name} header={titleize(item.name)} eventKey={index}>
-          <div key={item.name} className="panel-body-prop">{titleize(item.name)}</div>
+          <div key={item.name} className="panel-body-prop" onClick={() => this.scrollToProp(item.name)}>{titleize(item.name)}</div>
         </Panel>
       )
     }
+  }
+
+  scrollToProp(name) {
+    scroller.scrollTo(name, {
+      duration: 1000,
+      delay: 100,
+      smooth: true,
+    });
   }
 
   render() {

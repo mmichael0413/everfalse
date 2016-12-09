@@ -3,6 +3,9 @@ import { Row, Col } from 'react-bootstrap';
 import { capitalize, titleize } from '../helpers';
 import '../css/RightNav.css';
 
+import Scroll from 'react-scroll';
+const Element = Scroll.Element;
+
 class RightNav extends Component {
   constructor() {
     super();
@@ -18,7 +21,7 @@ class RightNav extends Component {
 
   renderProperty(prop) {
     return(
-      <div key={prop.name} className="prop">
+      <Element key={prop.name} className="prop" name={prop.name}>
         <h4>{titleize(prop.name)}</h4>
         <Row>
           <Col xs={6} md={4} className="prop-left">
@@ -32,7 +35,7 @@ class RightNav extends Component {
             <div className="prop-right-details name">{prop.name}</div>
           </Col>
         </Row>
-      </div>
+      </Element>
     )
   }
 

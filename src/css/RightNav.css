@@ -69,6 +69,7 @@ span.usage {
   background-repeat: no-repeat;
 }
 
+/* http://www.freepik.com/free-photos-vectors/arrow */
 .giving_tree {
   background: url('../images/green_arrow.png');
 }
@@ -80,4 +81,3 @@ span.usage {
 .community {
   background: url('../images/pink_arrow.png');
 }
-
