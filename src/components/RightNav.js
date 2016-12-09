@@ -40,17 +40,22 @@ class RightNav extends Component {
   }
 
   render() {
-    const key = this.props.item;
+    const key = this.props.currentItem;
     const item = this.props.items[key];
     const props = item.containing_object === undefined ? item.properties : item.containing_object.properties;
 
     return(
       <div className="panel-contents-right">
         <h3 className="panel-header-right">{titleize(item.name)}</h3>
-        {props.map(this.renderProperty)}
+        {props === undefined ? this.renderProperty(item) : props.map(this.renderProperty)}
       </div>
     )
   }
+}
+
+RightNav.propTypes = {
+  items: React.PropTypes.object.isRequired,
+  currentItem: React.PropTypes.string.isRequired
 }
 
 export default RightNav;

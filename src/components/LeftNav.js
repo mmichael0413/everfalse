@@ -9,8 +9,8 @@ const scroller = Scroll.scroller;
 class LeftNav extends Component {
   constructor() {
     super();
-    this.renderBody   = this.renderBody.bind(this);
-    this.scrollToProp = this.scrollToProp.bind(this);
+    this.renderBody     = this.renderBody.bind(this);
+    this.scrollToProp   = this.scrollToProp.bind(this);
   }
 
   renderBody(key, index) {
@@ -19,7 +19,7 @@ class LeftNav extends Component {
 
     if (props !== undefined) {
       return(
-        <Panel key={item.name} header={titleize(item.name)} eventKey={index}>
+        <Panel key={item.name} header={titleize(item.name)} eventKey={index} onClick={() => this.props.updateRightNav(item.name)}>
           {props.map(
             (prop) => 
               <div key={prop.name} className="panel-body-prop" onClick={() => this.scrollToProp(prop.name)}>
@@ -30,7 +30,7 @@ class LeftNav extends Component {
       )
     } else {
       return(
-        <Panel key={item.name} header={titleize(item.name)} eventKey={index}>
+        <Panel key={item.name} header={titleize(item.name)} eventKey={index} onClick={() => this.props.updateRightNav(item.name)}>
           <div key={item.name} className="panel-body-prop" onClick={() => this.scrollToProp(item.name)}>{titleize(item.name)}</div>
         </Panel>
       )
@@ -57,6 +57,10 @@ class LeftNav extends Component {
       </div>
     )
   }
+}
+
+LeftNav.propTypes = {
+  items: React.PropTypes.object.isRequired
 }
 
 export default LeftNav;
